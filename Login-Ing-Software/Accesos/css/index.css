@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    *background-image: url(../image/Fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+main{
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 28%;
+    transform: translateY(-50%);
+    margin-left:auto;
+}
+
+.Contenedor_Todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.Caja_Trasera{
+    width: 100%;
+    padding: 4.5rem 2rem;
+    display: inline-flexbox;
+    justify-content:center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 128, 255, 0.5);
+}
+
+.Caja_Trasera div{    
+    display: flex;
+    justify-content:right;
+    margin: 6rem 5rem;
+    color: white;
+    transition: all 500ms;
+}
+
+.Caja_Trasera div p, .Caja_Trasera div button{    
+    margin-top: 1rem;
+    position:relative;
+    left: 6rem;
+    top: 3rem;
+}
+
+.Caja_Trasera div h3{ 
+    font-weight: 400;
+    font-size: 1.1rem;
+    position:relative;
+    left: 30rem;
+    transform: translateX(-50%);
+}
+
+.Caja_Trasera button, #btn_Iniciar_Seccion { 
+    padding: 1rem 4rem;
+    border: 2rem solid #fff;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color:  #46A2FD;
+    outline: none;
+    transition: all 300ms;
+    transform: translateX(-0%);
+}
+
+.Caja_Trasera button, #btn_Iniciar_Seccion:hover {
+    background: #fff;
+    color: #0165fa;
+}
+
+/* Boton de registro */
+
+.Registro{
+    position: absolute;
+    left: 38rem;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.Registro:hover{
+    color: #0165fa;
+}
+
+
+.Logo{
+    padding: 5px; 
+    margin: 10px; 
+    float: right; 
+    width: 150px;
+}
+
+
+ /*Formulario*/
+.Contenedor_Login_Inicio{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    transition: left 500,s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+ .Contenedor_Login_Inicio form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+ }
+
+ .Contenedor_Login_Inicio form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+ }
+
+ .Contenedor_Login_Inicio form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+ }
+
+ .Contenedor_Login_Inicio form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    color: white;
+    cursor: pointer;
+    outline: none;  
+    transform: translateX(100%);
+    left: 10px; 
+ }
+
+ .Formulario_Login{
+    opacity: 1;
+    display: block;
+ }
+
+ /*Parte del Responsive*/
+
+ @media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+
+    .Caja_Trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .Caja_Trasera div{
+        margin: 10px 50px;
+        position:absolute;
+        top:150px; 
+        left:-80px; 
+        font-size: 20px;
+
+    }
+
+    .Caja_Trasera div h3{
+        margin: 0px;
+        position:absolute;
+        left:80px;
+        top:10px; 
+        font-size: 26px;
+    }
+    /*Formulario*/
+
+    .Contenedor_Login_Inicio{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+        
+    }
+
+    .Contenedor_Login_Inicio form{
+        position: relative;
+    }
+ }

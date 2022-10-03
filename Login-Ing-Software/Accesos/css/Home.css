@@ -1,0 +1,1050 @@
+:root {
+    --blanco: #ffffff;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --tercero:  #46A2FD;
+    --gris: #757575;
+    --oscuro: #212121;
+    --Agregar: #00FF00;
+    --Eliminar: #CC1100;
+
+    --negro: #393939;
+    --blanco1: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+}
+html{
+    font-size: 65.5%;
+}
+body{
+    font-size: 16px;
+}
+
+body{
+    background-image: url(../image/Fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+#Home{
+    background: var(--blanco);
+}
+
+/*Titulo*/
+.Titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1em sans-serif;
+    position:static;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+header{
+ width: 100%;
+ position: fixed;
+ top:0;
+ left: 0;
+ background-color: var(--tercero);
+}
+
+/*Barra de Navegación*/
+.navegacion{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    width: 100%;
+    margin: 0 2rem 1rem 0;
+    padding: 0 2rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    position: relative;
+}
+
+.Container__menu{
+    background: var(--tercero);
+    *z-index: 100;
+}
+
+
+.menu{
+    max-width: 120rem;
+    margin: auto;
+    height: 100%;    
+    background: var(--tercero);
+}
+
+nav{
+    height: 100%;
+    background: var(--tercero);   
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul >li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: all 300ms ease;
+}
+
+/*Efecto de la barra*/
+nav > ul >li > a:hover{
+    transform: scale(1.1);
+    background: var(--primario);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+.Logo {
+    padding-top: 2rem;
+    width: 20rem;
+}
+
+/*Submenu*/
+
+nav ul li ul{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--primario);
+    color: var(--blanco);
+    position:absolute;
+    top: 9rem;
+    left: -0.5rem;
+    padding: 1.4rem 0rem;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+    *z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 6rem;
+}
+
+nav ul li ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid var(--primario);
+    position:absolute;
+    top: -1.2rem;
+    left: 2rem;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: var(--blanco);
+    padding: 0.6rem;
+    padding-left: 1.4rem;
+    margin-top: -1rem;
+    font-size: 1.4rem;
+    text-transform: uppercase; 
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: var(--primario);
+    color: var(--oscuro);
+    transform: scale(1.1);
+    padding-left: 3rem;
+    font-size: 1.4rem;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+
+/*Responsibe*/
+
+@media screen and (max-width: 720px) {
+    
+    .Logo{
+        margin: 0 0 1rem 2rem;
+        width: 10rem;
+    }
+
+    .navegacion{
+        width: 100%;
+        margin: 0 5rem 0 1rem;
+        padding: 0 5rem 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        background: var(--tercero);
+    }
+        
+    nav{
+        height: 100%;
+        background: var(--tercero);
+    }
+       
+    nav  ul  li{
+        position: relative;
+    }
+    
+    nav > ul >li > a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        color: var(--blanco);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        transition: all 300ms ease;
+    }
+    
+    nav ul li:hover ul{
+        visibility: visible;
+        opacity: 1;
+        top: 5.3rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {    
+    .Logo{
+        margin: 0 0 1rem 2rem;
+        width: 8rem;
+    }
+    nav > ul{        
+        flex-direction: row;
+        position: fixed;
+        display: flex;
+        justify-content: right;
+        padding: 0 3rem 0 0;
+        margin: 0 3rem 0 0;
+        width: 100%;
+        height: auto;
+        transition: all 300ms ease;
+        font-size: 10rem;       
+    }
+}
+
+/*Depositos*/
+.main{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+}
+
+/*Icono de Cartas*/
+
+.icon-lista{
+    position: absolute;
+    color: var(--oscuro);
+    font-size: 1.5rem;
+    visibility: visible;
+    opacity: 0;
+ }
+ 
+ .icon-lista:hover{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.2);    
+ }
+
+ .icon-Menu:hover{
+    color: var(--oscuro);
+    transform: scale(1.1); 
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,1); 
+ }
+ .icon-Menu{
+    position: relative;
+    width: 6rem;
+    height: 2rem;
+    top: auto;
+    left: 1rem;
+    font-size: 1rem;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    color: var(--oscuro);
+    border-radius: 10rem;
+    background: var(--blanco);
+ }
+ 
+ .ico-car{
+    top: -14.5rem;
+    left: -2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+
+/*Cartas*/
+
+
+.Cartas{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    position:static;
+}
+
+.Parte-Inferior{
+    width: 30rem;
+    height: 35rem;
+    background: var(--tercero);
+    margin: 2rem;
+    border-radius: 0.6rem;    
+    justify-content:center;
+    *box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,1);
+}
+
+.Parte-Superior{  
+    width: 30rem;
+    height: 30rem;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.6rem; 
+    *background: var(--blanco);
+    -webkit-backdrop-filter: blur(1.5rem);
+    backdrop-filter:blur(1.5rem);
+    background-color: rgba(243, 243, 243, 0.2);
+}
+
+.Contenedor-Cartas{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;  
+}
+
+.Imagen{
+    margin: 0 2rem 0 2rem;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+}
+
+.Imagen1{
+    height: 15rem;
+    width: 15rem;
+}
+
+.Texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Definicion{
+    display: flex;
+    flex-direction: row;
+}
+
+.Parte-Inferior:hover{
+    transform: scale(1.04);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,1);
+}
+
+.Contenedor-Cartas{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
+}
+
+.Contenedor-Cartas > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+}
+
+/*Responsive Cartas*/
+
+@media screen and (max-width:720px) {
+    .Parte-Inferior{
+        width: 20rem;
+        height: 25rem;
+        background: var(--tercero);
+        margin: 2rem;
+        border-radius: 0.6rem;    
+        justify-content:center;
+        box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,1);
+    }
+    
+    .Parte-Superior{
+        width: 20rem;
+        height: 22rem;
+        margin: 2rem;
+        border-radius: 0.6rem;
+    }
+      
+    .Imagen{
+        margin: 0 1rem 0 1rem;
+        max-width: 100%;
+        max-height: 100%;
+        background-size: cover;
+    }
+    
+    .Imagen1{
+        height: 10rem;
+        width: 10rem;
+    }
+    
+    .Texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .Definicion{
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+    }
+
+    .icon-lista{
+        position:fixed;
+        color: var(--oscuro);
+        font-size: 1.3rem;
+        visibility: visible;
+        opacity: 0;
+        top: 0.5rem;
+        left: 18rem;
+     }
+     
+     .icon-Menu{
+        position: fixed;
+        width: 6rem;
+        height: 2rem;
+        top: auto;
+        left: 0rem;
+        font-size: 1rem;       
+     }
+     
+     .ico-car{
+        top: -14.5rem;
+        left: -2rem;        
+     }
+}
+
+@media screen and (max-width:480px) {
+    .Parte-Inferior{
+        width: 18rem;
+        height: 20rem;
+        background: var(--tercero);
+        margin: 2rem;
+        border-radius: 0.6rem;    
+        justify-content:center;
+    }
+    
+    .Parte-Superior{
+        width: 20rem;
+        height: 18rem;
+        margin: 2rem;
+        border-radius: 0.6rem;
+    }
+        
+    .Imagen{
+        margin: 0 0 0.5rem 0.5rem;
+        max-width: 100%;
+        max-height: 100%;
+        background-size: cover;
+    }
+    
+    .Imagen1{
+        height: 8rem;
+        width: 8rem;
+    }
+    
+    .Texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .Definicion{
+        display: flex;
+        flex-direction: row;
+        font-size: 0.9rem;
+    }
+
+    .icon-lista{
+        position:fixed;
+        color: var(--oscuro);
+        font-size: 1.1rem;
+        visibility: visible;
+        opacity: 0;
+        top: 0.5rem;
+        left: 16.5rem;
+     }
+     
+     .icon-Menu{
+        position: fixed;
+        width: 6rem;
+        height: 2rem;
+        top: auto;
+        left: 0rem;
+        font-size: 1rem;       
+     }
+     
+     .ico-car{
+        top: -14.5rem;
+        left: -2rem;        
+     }
+}
+
+
+
+/*Botones*/
+
+.Botones{
+    width: 30%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;   
+    position:fixed;
+    top: 30rem;
+    left: 90rem; 
+    
+}
+
+.Contenedor-Botones{
+    display: flex;
+    flex-direction: column;
+}
+
+.Boton{
+    width: 10rem;
+    height: 90rem;
+    text-decoration: none;
+    color: var(--blanco);
+    background: var(--tercero);
+    margin: 0 1rem 5rem 0;
+    font:sans-serif;
+    font-size: 2rem;
+    border: none;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    cursor: pointer;
+}
+
+.Agregar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Agregar:hover{
+    transform: scale(1.1);
+    background: var(--Agregar);
+    color: var(--oscuro);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+.Eliminar:hover{
+    transform: scale(1.1);
+    background: var(--Eliminar);
+    color: var(--oscuro);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+/*Buscador responsive*/
+@media screen and (max-width:720px) {
+    .Botones{
+        width: 30%;
+        height: 1rem;
+        display: flex;
+        justify-content: center;   
+        position:fixed;
+        top: 30rem;
+        left: 45rem; 
+        
+    }
+}
+
+@media screen and (max-width:480px) {
+    .Botones{
+        width: 30%;
+        height: 1rem;
+        display: flex;
+        justify-content: center;   
+        position:fixed;
+        top: 30rem;
+        left: 30rem; 
+        
+    }
+}
+
+@media screen and (max-width:390px) {
+    .Botones{
+        width: 30%;
+        height: 1rem;
+        display: flex;
+        justify-content: center;   
+        position:fixed;
+        top: 30rem;
+        left: 26.5rem;        
+        font-size: 1rem;
+    }
+}
+
+
+
+/*Buscador*/
+
+.Buscador{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    text-decoration: none;
+    width: 30rem;
+    height: 4rem;
+    padding: 0 2rem;
+    outline: none;
+    border-radius: 1rem;
+    background: var(--tercero);
+}
+
+.Buscar-texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--oscuro);
+    font-size: 2rem;
+    float: left;
+    line-height: 6rem;
+    transition: 550ms;
+}
+
+.Lupa{
+    width: 50%;
+    height: 50%;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.Lupa:hover{
+    color: var(--oscuro);
+}
+
+/*Buscador responsive*/
+@media screen and (max-width:720px) {
+    .Buscar{
+        width: 25rem;
+        height: 4rem;
+        padding: 0 2rem;
+    }
+
+    .Buscar-texto{       
+        font-size: 1.2rem;
+        line-height: 5rem;
+    }
+
+    .Lupa{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 50%;
+        height: 50%;
+        text-decoration: none;
+        color: var(--blanco);
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .Buscar{
+        width: 25rem;
+        height: 4rem;
+        padding: 0 2rem;
+    }
+
+    .Buscar-texto{       
+        font-size: 1.2rem;
+        line-height: 5rem;
+    }
+
+    .Lupa{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 50%;
+        height: 50%;
+        text-decoration: none;
+        color: var(--blanco);
+        font-size: 2rem;
+    }
+}
+
+/*Agregar*/
+ /*Titulo*/
+ .Titulo-Agregar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+/*Formulario*/
+.Formulario{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    position:static;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 1rem;
+}
+
+.Formulario-Superior{
+    width: 65rem;
+    height: 40rem;
+    margin: 2rem;
+    border-radius: 0.6rem;    
+    *background: var(--secundario);
+    background-color: rgba(0, 128, 255, 0.5);
+    display:inline-flex;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0,0,0,0.5);
+}
+
+td > input[type="text"]{
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.8rem;
+}
+
+td > input[type="tel"]{
+    border: none;
+    border-radius: 10rem;
+    font-size: 2rem;
+}
+
+td > input[type="file"]{
+    border: none;
+    border-radius: 10rem;
+    color: var(--oscuro);
+}
+
+#Boton-Imagen{
+ padding: 1rem;
+ width: 15rem;
+ background-color: var(--tercero);
+ position: relative;
+ border-radius: 10rem;
+}
+
+h3#Texto-Imagen{
+    display: flex;
+    text-align: center;
+    color:var(--blanco);
+}
+
+input#btn-Subir{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+::placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.Botones-Agregar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;    
+    position: relative;
+    
+}
+
+.Boton-Cancelar , .Boton-Agregar{
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--tercero);
+    border-radius: 10rem;
+    padding: 1rem;
+    margin: 0 1rem 0 1rem;
+    width: 15rem;
+    height: 4rem;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+.Boton-Cancelar:hover{
+    transform: scale(1.1);
+    background: var(--Eliminar);
+    color: var(--oscuro);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+}
+
+.Boton-Agregar:hover{
+    transform: scale(1.1);
+    background: var(--Agregar);
+    color: var(--oscuro);
+    transform: scale(1.1);
+}
+
+
+/*Formulario Responsive*/
+@media screen and (max-width:720px) {
+    
+    .Formulario-Superior{
+        width: 50rem;
+        height: 40rem;
+        margin: 2rem;
+        border-radius: 0.6rem;
+        *background: var(--blanco);
+        background-color: rgba(0, 128, 255, 0.5);
+        display:inline-flex;
+        margin: 2rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .Formulario-Superior{
+        width: 38rem;
+        height: 35rem;
+        margin: 1rem;
+        border-radius: 0.6rem;
+        *background: var(--blanco);
+        background-color: rgba(0, 128, 255, 0.5);
+        display:inline-flex;
+        padding: 2rem;
+    }
+
+    ::placeholder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    td > input[type="text"]{
+        font-size: 1.5rem;
+    }
+    
+    td > input[type="tel"]{
+        font-size: 1.5rem;
+    }
+}
+
+/*Home*/
+
+.Carrusel-Home{
+    width: 128rem;
+    height: auto;
+    margin: 5rem auto 0;
+    overflow: hidden;
+}
+
+.Carrusel-Home ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.Carrusel-Home li {
+    width: 100%;
+    list-style: none;   
+}
+
+.Carrusel-Home img {
+    width: 100%;
+    margin: 1rem;
+    padding: 0 5rem 0 2rem;
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    30% {margin-left: 0%;}
+
+    35% {margin-left: -100%;}
+    60% {margin-left: -100%;}
+
+    65% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+
+@media screen and (max-width:480px) {
+    
+    .title{
+        font-size: 2rem;
+        margin-top: 1em;
+        font-weight: 1rem;    
+    }
+}
+
+.title{
+    text-align: center;
+    font-size: 4rem;
+    color:var(--blanco1);
+    margin-top: 1em;
+    font-weight: 10rem;    
+}
+
+.Container{
+    width: 100%;
+    max-width: 120rem;
+    height: 43rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.Container .Card{
+    width: 33rem;
+    height: 25rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 2rem;
+    text-align: center;
+    transition: all .25s;
+}
+
+.Container .Card:hover{
+    transform: scale(1.1);
+    box-shadow: 1rem 0rem 1rem 0rem rgba(0,0,0,0.5);
+
+}
+
+.Card{
+    background: var(--tercero);
+    color: var(--blanco);
+    font-size: 1.4rem;
+}
+
+.Container .Card img{
+    width: 33rem;
+    height: 22rem;
+}
+
+.Container .Card h4{
+    font-weight: 600;
+}
+
+/*
+.carrousel {
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco1);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+  }
+  
+  .carrousel .grande {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco1);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+  
+  .carrousel .img1 {
+    width: calc( 100% / 2 - 2em);
+    min-height: 10vh;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+  
+  .carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 0em 0;  
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco1);
+    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+  
+  .carrousel .punto.activo {
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+*/
