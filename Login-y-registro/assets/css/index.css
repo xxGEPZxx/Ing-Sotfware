@@ -1,0 +1,116 @@
+/* Inicio pasar de px a rem */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 65.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+/* Comienzo barra de Navegación */
+
+/* Configuración de la barra*/
+.nav_contenedor_Todo{
+    position: fixed;
+    width: 100%;
+    background-color: #1D2E43;
+    height: 8rem;
+    color: #FFFFFF;
+    z-index: 20;
+}
+
+/* Configuración de los ul */
+.nav_ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;   
+}
+
+/* Posición de los links */
+.nav_links{
+    display: flex;
+    position: relative;
+    top: -0.5rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    
+}
+
+/* Orden de los li */
+.nav_li{
+    color: #FFFFFF;
+    top: -2rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.Contenedor_li{
+    margin: auto;
+    padding: auto;
+}
+
+
+/* Logo */
+
+.Contenedor_Logo{
+    width: 10%;
+    height: 100%;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#search, #logo{
+    align-self: flex-start;
+}
+
+/* Configuración del tamaño del buscador*/
+.Buscador{
+    width: 40%;
+}
+
+.C_B{
+    color: #FFFFFF;
+    top: -2rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+
+
+.C_B input{
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-top: -1rem;    
+}
+
+/* Efectos de los hover */
+
+.nav_li:hover{
+    border-radius: 2rem;
+    background-color: #46A2FD;
+}
+
+.C_B:hover{
+    background-color: rgb(84, 79, 79, 0.1);
+}
+
+/* Fin barra de Navegación */
