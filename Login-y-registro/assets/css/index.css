@@ -16,101 +16,73 @@ body{
     font-size: 16px;
 }
 
-/* Comienzo barra de Navegación */
 
-/* Configuración de la barra*/
-.nav_contenedor_Todo{
-    position: fixed;
-    width: 100%;
-    background-color: #1D2E43;
-    height: 8rem;
-    color: #FFFFFF;
-    z-index: 20;
-}
+/* footer */
 
-/* Configuración de los ul */
-.nav_ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    margin: 1rem;
-    padding: 1rem;   
-}
-
-/* Posición de los links */
-.nav_links{
-    display: flex;
-    position: relative;
-    top: -0.5rem;
-    margin: 0.5rem 0.5rem;
-    padding: 0.5rem 0.5rem;
-    
-}
-
-/* Orden de los li */
-.nav_li{
-    color: #FFFFFF;
-    top: -2rem;
-    margin: 0.5rem 0.5rem;
-    padding: 0.5rem 0.5rem;
-}
-
-.Contenedor_li{
+footer{
+    background: #1D2E43;
+    padding: 60px 0 30px 0;
     margin: auto;
-    padding: auto;
+    overflow: hidden;
 }
 
-
-/* Logo */
-
-.Contenedor_Logo{
-    width: 10%;
-    height: 100%;
-}
-
-.Logo{
+.contenedor-footer{
     display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
 }
 
-#search, #logo{
-    align-self: flex-start;
+.content-foo{
+    text-align: center;
 }
 
-/* Configuración del tamaño del buscador*/
-.Buscador{
-    width: 40%;
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #46A2FD;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.C_B{
+.content-foo p{
     color: #FFFFFF;
-    top: -2rem;
-    margin: 0.5rem 0.5rem;
-    padding: 0.5rem 0.5rem;
 }
 
-
-
-.C_B input{
-    width: 100%;
-    height: 3.5rem;
-    padding: 1rem;
-    margin-top: -1rem;    
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #FFFFFF;
 }
 
-/* Efectos de los hover */
+@media screen and (max-width:500px){   
+    /* Footer inicio*/
 
-.nav_li:hover{
-    border-radius: 2rem;
-    background-color: #46A2FD;
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+
+    /* Footer final */
 }
-
-.C_B:hover{
-    background-color: rgb(84, 79, 79, 0.1);
-}
-
-/* Fin barra de Navegación */
