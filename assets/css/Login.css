@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --blanco: #ffffff;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --tercero:  #46A2FD;
+    --gris: #757575;
+    --oscuro: #212121;
+    --Agregar: #00FF00;
+    --Eliminar: #CC1100;
+    --buscar: #22e6bf;
+    --Cancelar: #C63637;
+    --negro: #393939;
+    --blanco1: #ececec;
+    --sombra-ppal: #c9c9c9;
+    --sombra-sec: #ffffff;
+    --borde-negro: #00000050;
+    --marcado: rgb(127, 195, 255);
+}
+
+html{
+    font-size: 65.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+body{
+    background-image: url(../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+    z-index: 10;
+}
+
+.caja__trasera{
+    width: 110%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    background-color: rgba(0, 128, 255, 0.5);
+    border-radius: 5rem;
+    position: relative;
+    left: -2rem;
+
+}
+
+.caja__trasera div{
+    margin: 7.5rem 4rem;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 3rem;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.caja__trasera div p{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.caja__trasera button{
+    padding: 1rem 4rem;
+    border: 0.2rem solid #fff;
+    font-size: 1.4rem;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.Registar, .Entrar{
+    border-radius: 2rem;
+}
+
+#btn__registrarse{
+    position: absolute;
+    left: 60%;
+    border-radius: 2rem;
+}
+
+#btn__iniciar-sesion{
+    position: absolute;
+    left: 15%;    
+    border-radius: 2rem;
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #46A2FD;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 38rem;
+    position: relative;
+    top: -10.5rem;
+    left: 1rem;
+    
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.F-d-N{
+    margin-top: 1rem;   
+    font-size: 1.4rem;
+}
+
+.CI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nacionalidad{
+    position: relative;
+    top: 1rem;
+    left: -1rem;
+    *margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+    }
+
+/* .ID{
+    display: table-column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 2rem 2rem;
+    background: white;
+    position: absolute;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+.contenedor__login-register form h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    color: #46A2FD;
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: none;
+    background: #F2F2F2;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+
+.contenedor__login-register form .Entrar{
+    padding: 1rem 4rem;
+    margin-top: 4rem;
+    border: none;
+    font-size: 1.4rem;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70%;
+}
+
+.contenedor__login-register form .Registar{
+    padding: 1rem 4rem;
+    *margin-top: 4rem;
+    border: none;
+    font-size: 1.4rem;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 88%;
+}
+
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+
+.formulario__login{
+    *width: 10rem;
+    height: 35rem;
+    top: -22rem;
+}
+
+.formulario__login input{
+  position: relative;
+  top: 8rem;
+}
+
+.formulario__register{
+    display: none;
+    gap: 2rem;
+}
+
+/* Radio Sexo */
+
+ input[type="radio"]{
+    display: none;
+}
+
+.radio{
+    position: relative;
+    top: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.radio label{
+    color: #46A2FD ;
+    padding: 0.5rem 1.5rem 0.5rem 5.1rem;
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.radio label:hover{
+    background: rgba(0,116,217,0.2);
+}
+
+.radio label:before{
+    content: "";
+    width: 1.7rem;
+    height: 1.7rem;
+    display: inline-block;
+    background: none;
+    border: 0.3rem solid #46A2FD;
+    border-radius: 50%;
+    position: absolute;
+    left: 1.7rem;
+    top: 0.4rem;
+}
+
+input[type="radio"]:checked + label{
+    padding: 0.5rem 1.5rem;
+    background: #46A2FD;
+    border-radius: 0.2rem;
+    color: #fff;
+}
+
+input[type="radio"]:checked + label:before{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 35rem;
+        height: 30rem;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__todo{
+        top: 5rem;
+    }
+
+    .contenedor__login-register{
+        top: -1rem;
+        left: -0.5rem;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+
+    #btn__registrarse{
+        position: absolute;
+        left: 20%;
+    }
+    #btn__iniciar-sesion{
+        position: absolute;
+        left: 20%;
+    }
+
+    .CI{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Nacionalidad{
+        position: relative;
+        top: 1rem;
+        left: -1rem;
+        margin: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .caja__trasera-register{
+       top: 4rem;
+    }
+
+    .formulario__login{
+        top: -4rem;
+    }
+
+    .caja__trasera-login{
+        top: 2rem;
+    }
+
+    .formulario__register{
+        top: -8rem;
+    }
+    
+
+}
+
+/* Inicio pasar de px a rem */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 65.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+/* Comienzo barra de Navegación */
+
+/* Configuración de la barra*/
+.nav_contenedor_Todo{
+
+    position: fixed;
+    width: 100%;
+    background-color: #1D2E43;
+    height: 8rem;
+    color: white;
+    top: 0rem;
+    z-index: 20;
+}
+
+/* Configuración de los ul */
+.nav_ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;   
+}
+
+/* Posición de los links */
+.nav_links{
+    display: flex;
+    position: relative;
+    top: -0.5rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    
+}
+
+/* Orden de los li */
+.nav_li{
+    color: white;
+    top: -2rem;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+}
+
+.nav_links > .Contenedor_li > .nav_li:active{
+    background-color: var(--buscar);
+}
+
+.Contenedor_li{
+    margin: auto;
+    padding: auto;
+}
+
+/* Logo */
+
+.Contenedor_Logo{
+    width: 10%;
+    height: 100%;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#search, #logo{
+    align-self: flex-start;
+}
+
+/* Configuración del tamaño del buscador*/
+.Buscador{
+    width: 40%;
+}
+
+.C_B{
+    color: white;
+    top: -2rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.C_B input{
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-top: -1rem; 
+    border-top-left-radius: 2rem; 
+    border-bottom-left-radius: 2rem;    
+}
+
+/* Efectos de los hover */
+
+.nav_li:hover{
+    border-radius: 2rem;
+    background-color: #46A2FD;
+}
+
+.C_B:hover{
+    background-color: rgb(84, 79, 79, 0.1);
+}
+
+
+/* Fin barra de Navegación */
