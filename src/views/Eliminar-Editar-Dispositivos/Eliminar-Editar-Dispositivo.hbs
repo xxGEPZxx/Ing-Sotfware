@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="../../recursos/css/Eliminar-Editar-Dispositivos.css">
+
+
+    <div class="Opciones">
+        <div class="Opciones-Contenido">
+                    <h2>Ociones:</h2>
+                    <li><a href="../Guardar-Dispositivos">Agregar</a></li>
+                    <li><a href="../Eliminar-Editar-Dispositivos">Editar o Eliminar</a></li>               
+                    <li><a href="#">Reportes</a></li>
+                </div>
+    </div>
+
+    <div class="Contenido"> 
+        {{#each productosalmacen}}      
+            <div class="Contenedor-Phone">
+                <div class="Letras">
+                    <figure >
+                        <img src="{{Imagen_A}}" alt="Poco-x4-Pro-5G" class="img">
+                    </figure>
+                    <div class="Caracteristicas">
+                        <li>Nombre: {{Nombre_A}}</li>
+                        <li>Ram: {{Ram_A}} GB</li>
+                        <li>Rom: {{Rom_A}} GB</li>
+                        <li>Color: {{Color_A}}</li>
+                        <li>Precio: {{Precio_A}} $</li>
+                        <div class="Buttoon">
+                            <a href="/Eliminar-Editar-Dispositivos/Modificar/{{idProductosalmacen_A}}" class="btn-Editar"> Editar Producto </a>
+                            <a href="/Eliminar-Editar-Dispositivos/delete/{{idProductosalmacen_A}}" class="btn-Eliminar"> Eliminar Producto </a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>

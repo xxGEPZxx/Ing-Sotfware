@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="../../recursos/css/index.css">
+
+<div class="Articulos">       
+            <div class="Articulos-Contenido">
+                <h2>Marcas:</h2>
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">Apple</a></li>
+                <li><a href="#">Xiaomi</a></li>
+                <li><a href="#">Huawei</a></li>
+                <li><a href="#">Motorola</a></li>
+                <li><a href="#">Realme</a></li>
+                <li><a href="#">Honor</a></li>
+                <li><a href="#">Infinix</a></li>
+                <li><a href="">Tecno</a></li>
+            </div>        
+       </div>
+
+    <div class="Contenido">     
+
+        {{#each productosalmacen}}      
+            <div class="Contenedor-Phone">
+                <a href="{{idProductos}}" class="Letras">
+                    <figure >
+                        <img src="{{Imagen_A}}" alt="Poco-x4-Pro-5G" class="img">
+                    </figure>
+                    <div class="Caracteristicas">
+                        <li>Nombre: {{Nombre_A}}</li>
+                        <li>Ram: {{Ram_A}} GB</li>
+                        <li>Rom: {{Rom_A}} GB</li>
+                        <li>Color: {{Color_A}}</li>
+                        <li>Precio: {{Precio_A}} $</li>
+                        <button class="btn-Añadir"> Añadir al Carrito </button>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>

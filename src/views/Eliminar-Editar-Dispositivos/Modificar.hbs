@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="/recursos/css/Guardar-Dispositivo.css">
+{{!-- <link rel="stylesheet" href="/recursos/css/index.css"> --}}
+
+   <div class="Opciones">
+        <div class="Opciones-Contenido">
+                    <h2>Ociones:</h2>
+                    <li><a href="./Guardar-Dispositivos">Agregar</a></li>
+                    <li><a href="./Eliminar-Editar-Dispositivos">Editar o Eliminar</a></li>               
+                    <li><a href="#">Reportes</a></li>
+                </div>
+    </div>
+
+
+
+<div class="Contenido">   
+    <div class="Contenedor-Agregar">
+        <form action="/Guardar-Dispositivos/Guardar-Dispositivo" method="POST">
+                <div class="Columnas">
+                    <h4>Nombre:</h3>
+                    <input type="text" value="{{productosalmacen.Nombre_A}}" name="Nombre_A" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Serial:</h3>
+                    <input type="text" value="{{productosalmacen.Serial_A}}" name="Serial_A" required>
+                </div>
+    <!--min="1" step="1"-->
+                <div class="Columnas">  
+                    <h4>Precio:</h3>
+                    <input type="number" name="Precio_A" step="0.01" required>
+                </div class="Columnas">
+
+                <div class="Columnas">
+                    <h4>Color:</h3>
+                    <input type="text" name="Color_A" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Modelo del dispositivo:</h3>
+                    <input type="text" name="Modelo_A" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Numero de Versión:</h3>
+                    <input type="number" name="Version_A" max="20" step="1" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Capacidad de memoria Ram:</h3>
+                    <input type="number" name="Ram_A" max="24" step="1" required>
+                </div>
+
+                <div class="Columnas">   
+                    <h4>Capacidad de memoria Rom:</h3>
+                    <input type="number" name="Rom_A" max="1024" step="1" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Tamaño de la pantalla:</h3>
+                    <input type="number" name="Pantalla_A" max="7.6" step="0.01" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Capacidad de la bateria:</h3>
+                    <input type="number" name="Bateria_A" max="12000" step="1" required>
+                </div>
+                
+                <div class="Columnas">
+                    <h4>El dispositivo tiene Sensor:</h3>
+                    <div class="radio">
+                        <input type="radio" id="Si_Sensor" value="1" name="Sensor_A" required>
+                        <label for="Si_Sensor">Si</label>
+                    
+                        <input type="radio" id="No_Sensor" value="0" name="Sensor_A" required>
+                        <label for="No_Sensor">No</label>
+                    </div> 
+                </div>
+
+                <div class="Columnas">
+                    <h4>Version del android:</h3>
+                    <input type="number" name="V_Android_A" max="12" step="0.1" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Nombre del procesador:</h3>
+                    <input type="text" name="Procesador_A" required>
+                </div>
+
+                <div class="Columnas"> 
+                    <h4>URL de la imagen:</h4>
+                    <input type="url" name="Imagen_A" required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Calidad de la camara (selfie):</h4>
+                    <input type="number" name="Camara_S_A" max="48" step="1"  required>
+                </div>
+
+                <div class="Columnas">
+                    <h4>Calidad de la camara (principal):</h4>
+                    <input type="number" name="Camara_P_A" max="256" step="1"  required>
+                </div>
+
+                 <div class="Columnas-Radio">
+                    <h4>Marca:</h3>
+                    <div class="radio">
+                        <input type="radio" id="Samsung" value="1" name="Marcas_idMarcas" required>
+                        <label for="Samsung">Samsung</label>
+                    
+                        <input type="radio" id="Apple" value="2" name="Marcas_idMarcas" required>
+                        <label for="Apple">Apple</label>
+
+                        <input type="radio" id="Xiaomi" value="3" name="Marcas_idMarcas" required>
+                        <label for="Xiaomi">Xiaomi</label>
+
+                        <input type="radio" id="Huawei" value="4" name="Marcas_idMarcas" required>
+                        <label for="Huawei">Huawei</label>
+
+                        <input type="radio" id="Motorola" value="5" name="Marcas_idMarcas" required>
+                        <label for="Motorola">Motorola</label>
+                        
+                        <input type="radio" id="Realme" value="6" name="Marcas_idMarcas" required>
+                        <label for="Realme">Realme</label>
+                        
+                        <input type="radio" id="Honor" value="7" name="Marcas_idMarcas" required>
+                        <label for="Honor">Honor</label>
+
+                        <input type="radio" id="Inifinix" value="8" name="Marcas_idMarcas" required>
+                        <label for="Inifinix">Inifinix</label>
+
+                        <input type="radio" id="Tecno" value="9" name="Marcas_idMarcas" required>
+                        <label for="Tecno">Tecno</label>
+                        
+                    </div> 
+                </div>
+
+                <div class="Columnas-btn">
+                    <button class="btn-Guardar"> Modificar Producto </button>
+                </div>
+        </form>
+     </div>
+</div>

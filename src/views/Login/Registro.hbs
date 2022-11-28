@@ -1,0 +1,118 @@
+  <link rel="stylesheet" href="/recursos/css/Registro.css">
+ 
+
+ <div class="contenedor__todo_R">
+    <div class="caja__trasera"> 
+        <div class="caja__trasera-login">
+            <h3>¿Ya tienes una cuenta?</h3>
+            <p>Inicia sesión para entrar en la página y ver nuestros productos disponibles</p>
+            <a href="./Login" id="btn__iniciar-sesion">Iniciar Sesión</a>
+        </div>
+        <div class="caja__trasera-login">
+            <h3>¿Ya tienes una cuenta?</h3>
+            <p>Inicia sesión para entrar en la página y ver nuestros productos disponibles</p>
+        </div>
+    </div>
+
+    <!--Formulario de Login y registro-->
+    <div class="contenedor__login-register">
+    <!--Login-->
+        <form action="/Registro" method="POST" class="formulario__login">
+            <h2>Regístrarse</h2>
+            <input type="text" name="Nombre_U" placeholder="Nombre" required>
+            <input type="text" name="Apellido_U" placeholder="Apellido" required>
+            <p class="F-d-N" for="F-d-N"> Fecha de nacimiento: </p>
+            <input type="date" name="F_N_U" required>
+            <div class="CI">
+                <select name="Nacionalidad" class="Nacionalidad" required>
+                    <option value="-" selected>-</option>
+                    <option value="V">V</option>
+                    <option value="E">E</option>
+                </select> 
+                <input class="ID" name="CI_U" type="number" min="5000000" max="36000000" step="1" placeholder="Cedula" required>
+            </div>
+            <br>
+            <label>Sexo:</label>
+            <div class="radio">
+                <input type="radio" name="Sexo_U" value="Masculino" id="Masculino" name="Sexo">
+                <label for="Masculino">Masculino</label>
+
+                <input type="radio" name="Sexo_U" value="Femenino" id="Femenino" name="Sexo">
+                <label for="Femenino">Femenino</label>
+            </div>                       
+            <input type="email" name="Email_U" placeholder="Correo Electronico" required>
+            <input type="number" name="Phone_U" step="1" placeholder="Numero de telefono" required>
+            <input type="text" name="Address_U" placeholder="Direción" required>
+            <input type="password" name="password_U" placeholder="Contraseña" required>
+            <button type="submit" class="Registar" >Regístrarse</button>
+        </form>
+    </div>
+</div>
+  {{!--           
+<script>
+
+//Ejecutando funciones
+//document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
+//document.getElementById("btn__registrarse").addEventListener("click", register);
+//window.addEventListener("resize", anchoPage);
+
+//Declarando variables
+var //formulario_login = document.querySelector(".formulario__login");
+var //formulario_register = document.querySelector(".formulario__register");
+var //contenedor_login_register = document.querySelector(".contenedor__login-register");
+var// caja_trasera_login = document.querySelector(".caja__trasera-login");
+var// caja_trasera_register = document.querySelector(".caja__trasera-register");
+
+    //FUNCIONES
+
+//function anchoPage(){
+
+  //  if (window.innerWidth > 850){
+ //       caja_trasera_register.style.display = "block";
+  //      caja_trasera_login.style.display = "block";
+    }else{
+        caja_trasera_register.style.display = "block";
+        caja_trasera_register.style.opacity = "0";
+        caja_trasera_login.style.display = "none";
+        formulario_login.style.display = "block";
+        contenedor_login_register.style.left = "0px";
+        formulario_register.style.display = "block";   
+    }
+}
+
+anchoPage();
+
+ //   function iniciarSesion(){
+  //      if (window.innerWidth > 850){
+            formulario_login.style.display = "none";
+            contenedor_login_register.style.left = "10px";
+            formulario_register.style.display = "block";
+            caja_trasera_register.style.opacity = "0";
+            caja_trasera_login.style.opacity = "1";
+        }else{
+            formulario_login.style.display = "none";
+            contenedor_login_register.style.left = "0px";
+            formulario_register.style.display = "block";
+            caja_trasera_register.style.display = "block";
+            caja_trasera_login.style.display = "block";
+        }
+    }
+
+   // function register(){
+   //     if (window.innerWidth > 850){
+            formulario_register.style.display = "none";
+            contenedor_login_register.style.left = "410px";
+            formulario_login.style.display = "block";
+            caja_trasera_register.style.opacity = "1";
+            caja_trasera_login.style.opacity = "0";
+        }else{
+            formulario_register.style.display = "none";
+            contenedor_login_register.style.left = "0px";
+            formulario_login.style.display = "block";
+            caja_trasera_register.style.display = "block";
+            caja_trasera_login.style.display = "none";
+            caja_trasera_login.style.opacity = "0";
+        }
+}
+
+</script> --}}
